@@ -85,6 +85,7 @@ a{
   flex: 0 1 auto;
   order: 2;
   justify-content: space-between;
+  display: flex;
 
 }
 
@@ -141,6 +142,46 @@ a{
 }
 
 @media all and (min-width: 768px){
+  .main-content{
+    flex-direction: row;
+    overflow: hidden;
+
+  }
+
+  .thumbnail-list{
+    flex-direction: column;
+    order: 0;
+    margin-left: 20px;
+
+  }
+
+  .thumbnail-item{
+    max-width: 260px;
+
+  }
+
+  .thumbnail-item + .thumbnail-item{
+    margin-top: 20px;
+
+  }
+}
+
+@media (orientation: landscape){
+  .main-content{
+    flex-direction: row;
+
+
+  }
+}
+
+@media (orientation: portrait){
+  .main-content{
+    flex-direction: column;
+
+  }
+}
+
+/*@media all and (min-width: 768px){
 
   .main-content{
     flex-direction: row;
@@ -166,4 +207,4 @@ a{
     }
 
 
-  }
+  }*/
