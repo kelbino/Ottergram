@@ -12,11 +12,31 @@ function setDetails(imageUrl, titleText){
   the element and line of code that contains it*/
   //detailImage.setAttribute('src', 'img/otter3.jpg');
   detailImage.setAttribute('src',imageUrl);
+  /* the .setAttribute() method takes two parameters. It takes a property and a
+  value and sets the property to what ever value that is passed to it*/
 
 
   /*setAttribute function*/
   var detailTitle = document.querySelector(DETAIL_TITLE_SECLECTOR);
   //detailTitle.textContent = 'You Should Be Dancing';
   detailTitle.textContent = titleText;
+
+}
+
+function imageFromThumb(thumbnail){
+  'use strict';
+  return thumbnail.getAttribute('data-image-url');
+
+}
+
+function titleFromThumb(thumbnail){
+  'use strict';
+  return thumbnail.getAttribute('data-image-title');
+
+}
+
+function setDetailsFromThumb(thumbnail){
+  'use strict';
+  setDetails(imageFromThumb(thumbnail), titleFromThumb(thumbnail));
 
 }
