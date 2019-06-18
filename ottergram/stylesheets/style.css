@@ -1,0 +1,207 @@
+/*Kelvin H. Salvodon*/
+@font-face {
+  font-family: 'lakeshore';
+  src:url('fonts/LAKESHOR-webfont.eot');
+  src:url('fonts/LAKESHOR-webfont.woff'),
+      url('fonts/LAKESHOR-webfont.ttf'),
+      url('fonts/LAKESHOR-webfont.svg');
+  font-style: normal;
+  font-weight: normal;
+
+}
+
+
+@font-face {
+  font-family: 'airstreamregular';
+  src:url('fonts/Airstream-webfont.eot');
+  src:url('fonts/Airstream-webfont.woff'),
+      url('fonts/Airstream-webfont.ttf'),
+      url('fonts/Airstream-webfont.svg');
+  font-style: normal;
+  font-weight: normal;
+
+}
+
+html, body{
+  height: 100%;
+
+}
+
+body{
+  background: rgb(133, 182, 225);
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+
+}
+
+a{
+  /*style declaration*/
+  text-decoration: none;
+
+}
+
+.thumbnail-title{
+  background: rgb(96, 125, 139);
+  color: rgb(202, 238, 255);
+  display: block;
+  font-size: 18px;
+
+  margin: 0;
+  padding: 4px 10px;
+
+}
+
+.thumbnail-image{
+  display: block;
+  width:100%;
+
+}
+
+.thumbnail-item{
+  border: 1px solid rgb(100%, 100%, 100%);
+  border: 1px solid rgba(100%, 100%, 100%, 0.8);
+  display: inline-block;
+  /*width: 120px*/;
+  max-width: 120px;
+  min-width: 120px;
+
+}
+
+/*.thumbnail-item + .thumbnail-item{
+  margin-top: 10px;
+
+}*/
+
+
+.thumbnail-list{
+  list-style: none;
+  padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  flex: 0 1 auto;
+  order: 2;
+  justify-content: space-between;
+  display: flex;
+
+}
+
+.logo-text{
+  background: white;
+  font-family: lakeshore;
+  font-size: 37px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+.detail-image{
+  width: 90%;
+
+}
+
+.main-header{
+  flex: 0 1 auto;
+
+}
+
+.main-content{
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+}
+
+.detail-image-container{
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.detail-image-frame{
+  position: relative;
+  text-align: center;
+
+}
+
+.detail-image-title{
+  color: white;
+  font-size: 40px;
+  text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+  font-family: airstreamregular;
+  position: absolute;
+  bottom: -15px;
+  left: 4px;
+
+}
+
+@media all and (min-width: 768px){
+  .main-content{
+    flex-direction: row;
+    overflow: hidden;
+
+  }
+
+  .thumbnail-list{
+    flex-direction: column;
+    order: 0;
+    margin-left: 20px;
+
+  }
+
+  .thumbnail-item{
+    max-width: 260px;
+
+  }
+
+  .thumbnail-item + .thumbnail-item{
+    margin-top: 20px;
+
+  }
+}
+
+@media (orientation: landscape){
+  .main-content{
+    flex-direction: row;
+
+
+  }
+}
+
+@media (orientation: portrait){
+  .main-content{
+    flex-direction: column;
+
+  }
+}
+
+/*@media all and (min-width: 768px){
+
+  .main-content{
+    flex-direction: row;
+    overflow: hidden;
+
+  }
+
+  .thumbnail-list{
+    flex-direction: column;
+    margin-left: 20px;
+    order: 0;
+
+    }
+
+    .thumbnail-item{
+      max-width: 260px;
+
+    }
+
+    .thumbnail-item + .thumbnail-item{
+      margin-top: 20px;
+
+    }
+
+
+  }*/
